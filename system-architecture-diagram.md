@@ -33,9 +33,9 @@ graph TB
         CORS[CORS Middleware]
         
         subgraph "API Endpoints"
-            EM[/export-mysql]
-            QT[/query-temp]
-            ROOT[/]
+            EM["POST /export-mysql"]
+            QT["POST /query-temp"]
+            ROOT["GET /"]
         end
     end
 
@@ -96,27 +96,27 @@ graph TB
 ```mermaid
 graph LR
     subgraph "Main App Component"
-        APP[App.js<br/>939 lines<br/>State Management]
+        APP["App.js<br/>939 lines<br/>State Management"]
     end
 
     subgraph "UI Components"
-        NAV[NavBar<br/>Navigation & Branding]
-        FL[FileList<br/>File Upload & Selection]
-        TV[TableView<br/>Data Display<br/>Violation Visualization]
-        RP[RepairPanel<br/>Repair Actions<br/>Check/Clear Operations]
-        RS[RepairSection<br/>Repair File Management<br/>Export Functions]
-        CCM[ColumnConfigModal<br/>Column Type Configuration]
-        EEM[EditEntryModal<br/>Row Editing Interface]
+        NAV["NavBar<br/>Navigation & Branding"]
+        FL["FileList<br/>File Upload & Selection"]
+        TV["TableView<br/>Data Display<br/>Violation Visualization"]
+        RP["RepairPanel<br/>Repair Actions<br/>Check/Clear Operations"]
+        RS["RepairSection<br/>Repair File Management<br/>Export Functions"]
+        CCM["ColumnConfigModal<br/>Column Type Configuration"]
+        EEM["EditEntryModal<br/>Row Editing Interface"]
     end
 
     subgraph "Utility Layer"
-        DP[dataParser.js<br/>CSV/JSON Processing]
-        TD[typeDetection.js<br/>Column Type Inference]
-        VC[violationChecker.js<br/>Constraint Validation]
-        RG[repairGenerator.js<br/>Repair Strategy Generation]
-        EU[editUtils.js<br/>CRUD Operations]
-        EXP[exportUtils.js<br/>Data Export Functions]
-        SQL[sqlUtils.js<br/>Query Execution]
+        DP["dataParser.js<br/>CSV/JSON Processing"]
+        TD["typeDetection.js<br/>Column Type Inference"]
+        VC["violationChecker.js<br/>Constraint Validation"]
+        RG["repairGenerator.js<br/>Repair Strategy Generation"]
+        EU["editUtils.js<br/>CRUD Operations"]
+        EXP["exportUtils.js<br/>Data Export Functions"]
+        SQL["sqlUtils.js<br/>Query Execution"]
     end
 
     APP --> NAV
@@ -145,17 +145,17 @@ graph LR
 ```mermaid
 graph TB
     subgraph "Flask Application (app.py - 314 lines)"
-        FLASK[Flask Server<br/>CORS Enabled<br/>Debug Mode]
+        FLASK["Flask Server<br/>CORS Enabled<br/>Debug Mode"]
         
         subgraph "API Endpoints"
-            EM[POST /export-mysql<br/>MySQL Export Generation]
-            QT[POST /query-temp<br/>In-Memory Query Execution]
-            ROOT[GET /<br/>Health Check]
+            EM["POST /export-mysql<br/>MySQL Export Generation"]
+            QT["POST /query-temp<br/>In-Memory Query Execution"]
+            ROOT["GET /<br/>Health Check"]
         end
         
         subgraph "Database Connections"
-            MYSQL_CONN[MySQL Connector<br/>Production DB]
-            SQLITE_CONN[SQLite In-Memory<br/>Temporary Queries]
+            MYSQL_CONN["MySQL Connector<br/>Production DB"]
+            SQLITE_CONN["SQLite In-Memory<br/>Temporary Queries"]
         end
         
         subgraph "Data Processing"
@@ -285,22 +285,22 @@ graph TB
 ```mermaid
 graph TB
     subgraph "Frontend Stack"
-        REACT[React 18+<br/>Functional Components<br/>Hooks (useState, useRef)]
-        RTL[React Testing Library<br/>Jest Testing Framework<br/>133 Test Cases]
-        CSS[CSS Modules<br/>Component Styling]
-        HTTP[Fetch API<br/>HTTP Requests]
+        REACT["React 18+<br/>Functional Components<br/>Hooks (useState, useRef)"]
+        RTL["React Testing Library<br/>Jest Testing Framework<br/>133 Test Cases"]
+        CSS["CSS Modules<br/>Component Styling"]
+        HTTP["Fetch API<br/>HTTP Requests"]
     end
 
     subgraph "Backend Stack"
-        FLASK[Flask 2.x<br/>Python Web Framework]
-        FLASK_CORS[Flask-CORS<br/>Cross-Origin Support]
-        MYSQL_CONN[mysql-connector-python<br/>MySQL Database Driver]
-        SQLITE3[sqlite3<br/>In-Memory Database]
+        FLASK["Flask 2.x<br/>Python Web Framework"]
+        FLASK_CORS["Flask-CORS<br/>Cross-Origin Support"]
+        MYSQL_CONN["mysql-connector-python<br/>MySQL Database Driver"]
+        SQLITE3["sqlite3<br/>In-Memory Database"]
     end
 
     subgraph "Database Stack"
-        MYSQL[MySQL 8+<br/>Production Database]
-        SQLITE_MEM[SQLite In-Memory<br/>Temporary Query Processing]
+        MYSQL["MySQL 8+<br/>Production Database"]
+        SQLITE_MEM["SQLite In-Memory<br/>Temporary Query Processing"]
     end
 
     subgraph "Development Tools"
@@ -329,15 +329,15 @@ graph TB
 ```mermaid
 graph LR
     subgraph "Security Measures"
-        CORS_CONFIG[CORS Configuration<br/>Allowed Origins:<br/>localhost:3000<br/>127.0.0.1:3000]
-        ENV_VARS[Environment Variables<br/>MYSQL_HOST<br/>MYSQL_USER<br/>MYSQL_PASSWORD<br/>MYSQL_DATABASE]
-        INPUT_VALIDATION[Input Validation<br/>SQL Injection Prevention<br/>File Type Validation]
+        CORS_CONFIG["CORS Configuration<br/>Allowed Origins:<br/>localhost:3000<br/>127.0.0.1:3000"]
+        ENV_VARS["Environment Variables<br/>MYSQL_HOST<br/>MYSQL_USER<br/>MYSQL_PASSWORD<br/>MYSQL_DATABASE"]
+        INPUT_VALIDATION["Input Validation<br/>SQL Injection Prevention<br/>File Type Validation"]
     end
 
     subgraph "Configuration Management"
-        DB_CONFIG[Database Configuration<br/>Connection Pooling<br/>Error Handling]
-        FILE_HANDLING[File Handling<br/>CSV/JSON Parsing<br/>Memory Management]
-        ERROR_HANDLING[Error Handling<br/>Try-Catch Blocks<br/>User-Friendly Messages]
+        DB_CONFIG["Database Configuration<br/>Connection Pooling<br/>Error Handling"]
+        FILE_HANDLING["File Handling<br/>CSV/JSON Parsing<br/>Memory Management"]
+        ERROR_HANDLING["Error Handling<br/>Try-Catch Blocks<br/>User-Friendly Messages"]
     end
 
     CORS_CONFIG --> DB_CONFIG
