@@ -229,36 +229,36 @@ sequenceDiagram
 graph TB
     subgraph "App.js State Management"
         subgraph "File Management State"
-            FILES[files[]]
-            SELECTED_FILE[selectedFile]
-            FILE_TABLES[fileTables{}]
-            TABLE_DATA[tableData[]]
+            FILES["files[]"]
+            SELECTED_FILE["selectedFile"]
+            FILE_TABLES["fileTables{}"]
+            TABLE_DATA["tableData[]"]
         end
         
         subgraph "Repair State"
-            REPAIR_FILES[repairFiles[]]
-            SELECTED_REPAIR[selectedRepairFile]
-            REPAIR_TRIGGERED[repairTriggered]
-            REPAIR_CHECK_MODE[repairCheckMode]
+            REPAIR_FILES["repairFiles[]"]
+            SELECTED_REPAIR["selectedRepairFile"]
+            REPAIR_TRIGGERED["repairTriggered"]
+            REPAIR_CHECK_MODE["repairCheckMode"]
         end
         
         subgraph "Constraint State"
-            CONFIRMED_CONSTRAINTS[confirmedConstraints[]]
-            CONFIRMED_TYPES[confirmedTypes[]]
-            FK_CONFIG[foreignKeyConfig{}]
+            CONFIRMED_CONSTRAINTS["confirmedConstraints[]"]
+            CONFIRMED_TYPES["confirmedTypes[]"]
+            FK_CONFIG["foreignKeyConfig{}"]
         end
         
         subgraph "UI State"
-            EDIT_MODAL[editModal{}]
-            CHECK_RESULTS[checkResults]
-            COLUMN_CONFIG[columnConfig{}]
+            EDIT_MODAL["editModal{}"]
+            CHECK_RESULTS["checkResults"]
+            COLUMN_CONFIG["columnConfig{}"]
         end
         
         subgraph "Query State"
-            SQL_QUERY[sqlQuery]
-            SQL_RESULT[sqlResult]
-            SQL_ERROR[sqlError]
-            SQL_MODAL[sqlModalOpen]
+            SQL_QUERY["sqlQuery"]
+            SQL_RESULT["sqlResult"]
+            SQL_ERROR["sqlError"]
+            SQL_MODAL["sqlModalOpen"]
         end
     end
 
