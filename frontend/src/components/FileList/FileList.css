@@ -1,0 +1,113 @@
+/* Upload button row for first file removed */
+/* Add button row below file list */
+.filelist-add-btn-row {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+.filelist-add-btn {
+  background: #00c3ff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(60,60,60,0.10);
+  transition: background 0.2s, transform 0.1s;
+}
+.filelist-add-btn:hover {
+  background: #0099cc;
+  transform: scale(1.08);
+}
+/* Header for FileList, styled similar to RepairPanel header */
+.filelist-header {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 2em;
+  font-weight: 700;
+  margin: 3.5rem 0 1.2rem 0;
+  justify-content: center;
+  width: 100%;
+}
+.file-list-new {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+}
+.filelist-header {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 5.5rem 0 1.2rem 0;
+  justify-content: center;
+  width: 100%;
+}
+.filelist-header h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+}
+.csv-main-icon {
+  color: #00c3ff;
+  font-size: 1.4rem;
+  vertical-align: middle;
+}
+.csv-main-icon {
+  color: #00c3ff;
+  font-size: 1.4rem;
+}
+.file-list-new ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.file-list-new li {
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  gap: 0.7rem;
+}
+.file-list-new li.selected, .file-list-new li:hover {
+  background: #00c3ff33;
+  color: #00c3ff;
+}
+.file-list-new li.empty {
+  color: #aaa;
+  cursor: default;
+  background: none;
+  text-align: center;
+}
+.csv-file-icon {
+  color: #00c3ff;
+  font-size: 1.2rem;
+}
+.file-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+}

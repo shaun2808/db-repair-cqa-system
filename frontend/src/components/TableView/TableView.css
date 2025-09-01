@@ -1,0 +1,185 @@
+/* Add scrollable table container */
+.table-scroll {
+  flex: 1;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  /* Enable horizontal scrolling for wide tables */
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+.repair-header {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  background: linear-gradient(90deg, #e3f0ff 0%, #f4f8fb 100%);
+  box-sizing: border-box;
+  border-bottom: 2px solid #0077c8;
+  margin-top: 60px;
+}
+
+.repair-header h2 {
+  margin: 0;
+  color: #0077c8;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.table-header {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  background: linear-gradient(90deg, #e3f0ff 0%, #f4f8fb 100%);
+  box-sizing: border-box;
+  border-bottom: 2px solid #0077c8;
+  margin-top: 60px;
+}
+
+.table-header h2 {
+  margin: 0;
+  color: #0077c8;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.table-view-new {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: #222 1px solid;
+}
+.table-view-new table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 2px 12px 0 rgba(60,60,60,0.07);
+  font-size: 1.08rem;
+  transition: box-shadow 0.2s;
+  margin: 0;
+  table-layout: auto; /* Changed from fixed to auto for dynamic column widths */
+  min-width: 100%; /* Ensure table can expand beyond container width */
+  white-space: nowrap; /* Prevent text wrapping in cells */
+}
+.table-view-new th, .table-view-new td {
+  padding: 0.5rem 0.8rem; /* Increased horizontal padding for better readability */
+  border-bottom: 1px solid #e0e7ef;
+  text-align: left;
+  min-width: 120px; /* Minimum column width */
+  max-width: 300px; /* Maximum column width to prevent overly wide columns */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Show ... for long text */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+.table-view-new th {
+  background: linear-gradient(90deg, #e0e7ef 0%, #f8fafc 100%);
+  font-weight: 700;
+  color: #222;
+  border-top: none;
+  border-bottom: 2px solid #b0b8c9;
+}
+.table-view-new tbody tr {
+  transition: background 0.18s;
+}
+.table-view-new tbody tr:hover {
+  background: #e0e7ef88;
+}
+.table-view-new td {
+  border-bottom: 1px solid #e0e7ef;
+}
+.table-view-new tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table-view-new.stylish {
+  position: relative;
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ef 100%);
+  box-shadow: 0 2px 12px 0 rgba(60,60,60,0.07);
+  padding: 0;
+  margin: 0;
+  /* Ensure the container can handle horizontal scrolling */
+  overflow: hidden;
+}
+
+/* Custom scrollbar styling for better UX */
+.table-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.table-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.table-scroll::-webkit-scrollbar-thumb {
+  background: #0077c8;
+}
+
+.table-scroll::-webkit-scrollbar-thumb:hover {
+  background: #0077c8;
+}
+
+/* Sticky header for better navigation in large tables */
+.table-view-new th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: linear-gradient(90deg, #e0e7ef 0%, #f8fafc 100%);
+  font-weight: 700;
+  color: #222;
+  border-top: none;
+  border-bottom: 2px solid #b0b8c9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow to sticky header */
+}
+
+.table-view-new.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  font-size: 1.1rem;
+  height: 100%;
+}
+
+.table-empty-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.table-main-icon {
+  font-size: 3.5rem;
+  color: #b0b8c9;
+  margin-bottom: 0.5rem;
+}
+
+.upload-btn {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(90deg, #4f8cff 0%, #38c6ff 100%);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 24px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(60,60,60,0.08);
+  transition: background 0.2s;
+  margin-top: 0.5rem;
+}
+.upload-btn:hover {
+  background: linear-gradient(90deg, #38c6ff 0%, #4f8cff 100%);
+}

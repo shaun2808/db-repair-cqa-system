@@ -1,0 +1,11 @@
+/* Red dot for violation */
+.violation-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #ff3b3b;
+  border-radius: 50%;
+  margin-left: 6px;
+  vertical-align: middle;
+  box-shadow: 0 0 2px #b00000;
+}
